@@ -32,9 +32,4 @@ defmodule HttpServer.Dumb do
         :close
     end
   end
-
-  def write_line(msg, accept_socket) do
-    Logger.info "write_line: #{msg}"
-    :gen_tcp.send(accept_socket, msg)
-  end
 end
