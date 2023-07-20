@@ -29,7 +29,7 @@ defmodule HttpServer.Dumb do
         IO.puts String.trim(msg)
       {:error, :closed} ->
         Logger.info "read_line: Server Closed"
-        :close
+        :closed
     end
   end
 end
