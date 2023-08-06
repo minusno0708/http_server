@@ -42,7 +42,7 @@ defmodule HttpServer.Hello do
   end
 
   def send_resp(accept_socket) do
-    msg = "Hello, Elixir"
+    msg = "Hello, Elixir Http Server"
     resp_msg = """
       HTTP/1.1 200 OK
       Content-Length: #{String.length(msg)}
