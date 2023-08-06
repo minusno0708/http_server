@@ -8,7 +8,7 @@ defmodule HttpServer.Header do
   end
 
   def loop_acceptor(listen_socket) do
-    {:ok, accept_socket} = :gen_tcpt.accept(listen_socket)
+    {:ok, accept_socket} = :gen_tcp.accept(listen_socket)
     handle_server(accept_socket)
     loop_acceptor(listen_socket)
   end
